@@ -322,10 +322,13 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
     });
     // Old links from the previous site (#privacy, #terminos, #reembolso)
     var legacy = { '#privacy': '/privacidad.html', '#terminos': '/terminos.html', '#reembolso': '/reembolsos.html', '#about': '#nosotros', '#work': '#servicios', '#contact': '#contacto' };
-    if (legacy[location.hash]) {
+    function goLegacy() {
       var dest = legacy[location.hash];
+      if (!dest) return;
       if (dest.charAt(0) === '/') { location.replace(dest); } else { location.hash = dest; }
     }
+    goLegacy();
+    window.addEventListener('hashchange', goLegacy);
   })();
 </script>
 </body>
