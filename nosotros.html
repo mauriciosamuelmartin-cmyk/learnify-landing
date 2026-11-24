@@ -35,13 +35,15 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 .faq summary::-webkit-details-marker{display:none}
 .faq[open] .plus{transform:rotate(45deg)}
 .plus,.chev{transition:transform .2s ease}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mq{animation:mq 36s linear infinite}
 @keyframes rv{from{opacity:0;filter:blur(10px);transform:translateY(18px)}to{opacity:1;filter:blur(0);transform:none}}
 @supports (animation-timeline: view()){
   @media (prefers-reduced-motion: no-preference){
     .reveal{animation:rv linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
   }
 }
-@media (prefers-reduced-motion: reduce){.pill,.card{transition:none}}
+@media (prefers-reduced-motion: reduce){.pill,.card{transition:none}.mq{animation:none}}
 </style>
 <script src="/assets/site.js" defer></script>
 </head>
@@ -51,11 +53,11 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
       <div style="max-width: 1240px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between">
         <a href="/" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #FFFFFF"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect x="0" y="0" width="32" height="32" rx="8" fill="#7DD3FC"></rect><path d="M10 8v16h12" fill="none" stroke="#0A1A33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-weight: 600; font-size: 20px; letter-spacing: -0.02em">Learnify Digital</span></a>
         <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 8px 30px; align-items: center; font-size: 15px">
-          <details class="menu" style="position: relative"><summary class="navlink" style="display: inline-flex; align-items: center; gap: 6px; color: #B9CCE6; padding: 6px 0">Servicios <svg class="chev" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary><div style="position: absolute; top: 40px; left: -16px; z-index: 20; width: 300px; background: #FFFFFF; border-radius: 16px; padding: 8px; border: 1px solid #D0E2F4; display: flex; flex-direction: column"><a class="lnk-dark" href="/consultoria.html" style="display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 12px; text-decoration: none; color: #0A1A33"><span style="font-weight: 600; font-size: 15px">Consultoría de negocios</span><span style="font-size: 13px; color: #44536A">Estrategia, ventas, procesos y métricas</span></a><a class="lnk-dark" href="/educacion.html" style="display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 12px; text-decoration: none; color: #0A1A33"><span style="font-weight: 600; font-size: 15px">Educación digital</span><span style="font-size: 13px; color: #44536A">Ebooks prácticos sobre negocios</span></a><a class="lnk-dark" href="/programa.html" style="display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 12px; text-decoration: none; color: #0A1A33"><span style="font-weight: 600; font-size: 15px">Programa de ingresos digitales</span><span style="font-size: 13px; color: #44536A">Vendé online con tu tienda en Shopify</span></a></div></details>
+          <a class="navlink" href="/partnership.html" style="color: #B9CCE6; text-decoration: none; padding: 6px 0">Partnership</a>
           <a class="navlink" href="/como-trabajamos.html" style="color: #B9CCE6; text-decoration: none; padding: 6px 0">Cómo trabajamos</a>
           <a class="navlink" href="/nosotros.html" aria-current="page" style="color: #FFFFFF; text-decoration: none; padding: 6px 0; box-shadow: inset 0 -2px 0 #34D399">Sobre nosotros</a>
           <a class="navlink" href="/contacto.html" style="color: #B9CCE6; text-decoration: none; padding: 6px 0">Contacto</a>
-          <a class="pill pill-grn" href="/contacto.html" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 8px 0 20px; border-radius: 999px; background: #34D399; color: #0A1A33; font-weight: 600; text-decoration: none">Hablemos<span class="arr" style="width: 30px; height: 30px; border-radius: 999px; background: #0A1A33; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
+          <a class="pill pill-grn" href="https://calendly.com/mauriciosamuelmartin-ry4d" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 8px 0 20px; border-radius: 999px; background: #34D399; color: #0A1A33; font-weight: 600; text-decoration: none">Agendar llamada<span class="arr" style="width: 30px; height: 30px; border-radius: 999px; background: #0A1A33; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
         </nav>
       </div>
     </header><section style="position: relative; overflow: hidden; background: #EEF5FC">
@@ -63,8 +65,8 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
     <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 104px 24px 88px; display: flex; flex-wrap: wrap; gap: 32px 72px; align-items: flex-start">
       <h1 class="reveal" style="flex: 1 1 440px; margin: 0; font-weight: 500; font-size: clamp(48px, 6.4vw, 84px); line-height: 0.98; letter-spacing: -0.04em">Cómo llegamos acá.</h1>
       <div class="reveal" style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 16px; font-size: 18px; line-height: 1.6; color: #2E4566">
-        <p style="margin: 0">Learnify Digital empezó creando productos de educación digital: ebooks prácticos para emprender.</p>
-        <p style="margin: 0">Con el tiempo, el trabajo creció hacia acompañar a otros negocios en lo que más cuesta: ordenar la oferta, conseguir clientes de forma constante y trabajar con procesos claros.</p>
+        <p style="margin: 0">Learnify Digital nació construyendo y vendiendo productos digitales propios. Eso nos obligó a aprender a armar sistemas de venta desde cero: oferta, adquisición de clientes, procesos y métricas.</p>
+        <p style="margin: 0">Con el tiempo empezamos a aplicar ese aprendizaje dentro de otras empresas, como socios. Hoy ese es el centro de lo que hacemos.</p>
       </div>
     </div>
     <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 0 24px 104px; display: flex; flex-wrap: wrap; gap: 20px">
@@ -75,32 +77,36 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
           <canvas data-glass="/assets/img/hero-trabajando.jpg|even|0.7|0.6" aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block"></canvas>
         </div></div>
     </div>
-  </section><section style="background: #0A1A33; color: #FFFFFF">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 104px 24px; display: flex; flex-direction: column; gap: 44px">
+  </section><section style="position: relative; overflow: hidden; background: #0A1A33; color: #FFFFFF">
+    
+    <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 104px 24px; display: flex; flex-direction: column; gap: 44px">
       <div class="reveal" style="display: flex; flex-wrap: wrap; gap: 20px 64px; align-items: flex-end; justify-content: space-between">
-        <div style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 16px"><div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #7DD3FC">Qué hacemos</div><h2 style="margin: 0; font-weight: 500; font-size: clamp(34px, 4.2vw, 52px); line-height: 1.05; letter-spacing: -0.03em">Dos áreas, un mismo objetivo: que tu negocio funcione con más claridad.</h2></div>
+        <div style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 16px"><div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #7DD3FC">Qué hacemos</div><h2 style="margin: 0; font-weight: 500; font-size: clamp(34px, 4.2vw, 52px); line-height: 1.05; letter-spacing: -0.03em">Nos asociamos con empresas para hacer crecer sus ventas.</h2></div>
         
-      </div><div style="display: flex; flex-wrap: wrap; gap: 16px">
-        <a class="card reveal" href="/consultoria.html" style="flex: 1 1 380px; text-decoration: none; color: #FFFFFF; background: #0F2547; border: 1px solid #2E5287; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 12px">
-          <div style="width: 40px; height: 2px; background: #34D399"></div>
-          <div style="font-size: 28px; font-weight: 500; letter-spacing: -0.02em">Consultoría de negocios</div>
-          <div style="font-size: 15px; line-height: 1.55; color: #C9DBEF">Estrategia, ventas, procesos y métricas, con acompañamiento 1 a 1.</div>
-          <div style="display: flex; gap: 8px; align-items: center; font-weight: 600; color: #34D399">Ver más <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></div>
-        </a>
-        <a class="card reveal" href="/educacion.html" style="flex: 1 1 380px; text-decoration: none; color: #FFFFFF; background: #0F2547; border: 1px solid #2E5287; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 12px">
-          <div style="width: 40px; height: 2px; background: #7DD3FC"></div>
-          <div style="font-size: 28px; font-weight: 500; letter-spacing: -0.02em">Educación digital</div>
-          <div style="font-size: 15px; line-height: 1.55; color: #C9DBEF">Ebooks prácticos sobre negocios, estrategia y procesos.</div>
-          <div style="display: flex; gap: 8px; align-items: center; font-weight: 600; color: #7DD3FC">Ver más <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#7DD3FC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></div>
-        </a>
-      </div>
+      </div><div style="display: flex; flex-wrap: wrap; gap: 16px"><div class="card reveal" style="flex: 1 1 240px; min-width: 0; background: #0F2547; border: 1px solid #2E5287; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+          <div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; color: #34D399">01</div>
+          <div style="font-size: 21px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2">Estrategia y oferta</div>
+          <div style="font-size: 15px; line-height: 1.55; color: #C9DBEF">Qué vendés, a quién, a qué precio y con qué escalera de valor.</div>
+        </div><div class="card reveal" style="flex: 1 1 240px; min-width: 0; background: #0F2547; border: 1px solid #2E5287; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+          <div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; color: #34D399">02</div>
+          <div style="font-size: 21px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2">Adquisición de clientes</div>
+          <div style="font-size: 15px; line-height: 1.55; color: #C9DBEF">Sistemas para que entren clientes de forma constante: lanzamientos y orgánico.</div>
+        </div><div class="card reveal" style="flex: 1 1 240px; min-width: 0; background: #0F2547; border: 1px solid #2E5287; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+          <div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; color: #34D399">03</div>
+          <div style="font-size: 21px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2">Ventas y equipo</div>
+          <div style="font-size: 15px; line-height: 1.55; color: #C9DBEF">Proceso comercial, guiones y seguimiento; sumamos y formamos al equipo si hace falta.</div>
+        </div><div class="card reveal" style="flex: 1 1 240px; min-width: 0; background: #0F2547; border: 1px solid #2E5287; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+          <div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; color: #34D399">04</div>
+          <div style="font-size: 21px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2">Procesos y métricas</div>
+          <div style="font-size: 15px; line-height: 1.55; color: #C9DBEF">Orden interno y números claros para que los resultados sean predecibles.</div>
+        </div></div><a class="pill" href="/partnership.html" style="align-self: flex-start; display: inline-flex; gap: 8px; align-items: center; min-height: 44px; font-weight: 600; color: #34D399; text-decoration: none">Ver el partnership en detalle <span class="arr" style="display: inline-flex"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
     </div>
   </section><section style="position: relative; overflow: hidden; background: #EEF5FC">
     <canvas data-topo="29,0.5,0.5" aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; color: #C6DAEF; pointer-events: none"></canvas>
     <div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 104px 24px; display: flex; flex-direction: column; gap: 44px">
       <div class="reveal" style="display: flex; flex-direction: column; gap: 20px; max-width: 1000px">
         <div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #2F5F96">Misión</div>
-        <p style="margin: 0; font-weight: 500; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.14; letter-spacing: -0.025em">Ayudar a negocios y emprendedores a pasar del desorden a un sistema: claridad para decidir, estructura para trabajar y previsibilidad para crecer.</p>
+        <p style="margin: 0; font-weight: 500; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.14; letter-spacing: -0.025em">Ser el socio que las empresas necesitan para crecer con orden: claridad para decidir, sistemas para vender y previsibilidad para escalar.</p>
       </div>
     </div>
   </section><section style="position: relative; overflow: hidden; background: #E3EEF9">
@@ -109,30 +115,40 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
       <div class="reveal" style="display: flex; flex-wrap: wrap; gap: 20px 64px; align-items: flex-end; justify-content: space-between">
         <div style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 16px"><div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #2F5F96">Valores</div><h2 style="margin: 0; font-weight: 500; font-size: clamp(34px, 4.2vw, 52px); line-height: 1.05; letter-spacing: -0.03em">Cómo trabajamos, todos los días.</h2></div>
         
-      </div><div style="display: flex; flex-wrap: wrap; gap: 16px"><div class="card reveal" style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #D0E2F4; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+      </div><div style="display: flex; flex-wrap: wrap; gap: 16px"><div class="card reveal" style="flex: 1 1 240px; min-width: 0; background: #FFFFFF; border: 1px solid #D0E2F4; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
           <div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; color: #2F5F96">01</div>
-          <div style="font-size: 21px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2">Claridad</div>
-          <div style="font-size: 15px; line-height: 1.55; color: #44536A">Objetivos y alcances definidos desde el inicio, sin letra chica.</div>
-        </div><div class="card reveal" style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #D0E2F4; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+          <div style="font-size: 21px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2">Compromiso</div>
+          <div style="font-size: 15px; line-height: 1.55; color: #44536A">Nos involucramos como socios, no como proveedores.</div>
+        </div><div class="card reveal" style="flex: 1 1 240px; min-width: 0; background: #FFFFFF; border: 1px solid #D0E2F4; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
           <div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; color: #2F5F96">02</div>
+          <div style="font-size: 21px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2">Claridad</div>
+          <div style="font-size: 15px; line-height: 1.55; color: #44536A">Objetivos, alcance y condiciones definidos desde el inicio.</div>
+        </div><div class="card reveal" style="flex: 1 1 240px; min-width: 0; background: #FFFFFF; border: 1px solid #D0E2F4; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+          <div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; color: #2F5F96">03</div>
           <div style="font-size: 21px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2">Planificación</div>
           <div style="font-size: 15px; line-height: 1.55; color: #44536A">Trabajo por etapas, con próximos pasos concretos.</div>
-        </div><div class="card reveal" style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #D0E2F4; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
-          <div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; color: #2F5F96">03</div>
+        </div><div class="card reveal" style="flex: 1 1 240px; min-width: 0; background: #FFFFFF; border: 1px solid #D0E2F4; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+          <div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; color: #2F5F96">04</div>
           <div style="font-size: 21px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2">Mejora continua</div>
           <div style="font-size: 15px; line-height: 1.55; color: #44536A">Procesos que se revisan, se miden y se ajustan.</div>
         </div></div>
     </div>
-  </section><section style="background: #0A1A33; color: #FFFFFF">
+  </section><section id="equipo" style="background: #0A1A33; color: #FFFFFF">
     <div style="max-width: 1240px; margin: 0 auto; padding: 104px 24px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
-      <div class="reveal" style="flex: 1 1 380px; min-width: 0"><div role="img" aria-label="Mauricio Martín sonriendo frente a su computadora" style="position: relative; height: 500px; border-radius: 24px; overflow: hidden; background: #0F2547; border: 1px solid #1C3A66">
+      <div class="reveal" style="flex: 1 1 380px; min-width: 0"><div role="img" aria-label="Mauricio Martín sonriendo frente a su computadora" style="position: relative; height: 520px; border-radius: 24px; overflow: hidden; background: #0F2547; border: 1px solid #1C3A66">
           <canvas data-glass="/assets/img/mauricio-perfil.jpg|edge|0.5|0.4" aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block"></canvas>
         </div></div>
       <div class="reveal" style="flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
         <div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #7DD3FC">Quién está detrás</div>
         <h2 style="margin: 0; font-weight: 500; font-size: clamp(34px, 4.2vw, 52px); line-height: 1.05; letter-spacing: -0.03em">Mauricio Martín</h2>
-        <div style="font-size: 17px; color: #34D399; font-weight: 500">Fundador de Learnify Digital LLC · Socio y consultor de empresas</div>
-        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #C9DBEF; max-width: 600px">Hace 2 años y medio trabajo como socio y consultor de empresas, ayudándolas a aumentar sus ventas, ordenar su trabajo y hacer más predecibles sus resultados. Como growth operator armé sistemas de adquisición de clientes, tanto para lanzamientos como para crecimiento orgánico, en nichos muy distintos: desde Fabián Lozano, golfista que enseña a mejorar el juego y el golpe, hasta Ashley Tellez, en espiritualidad femenina. Hoy acompaño a varios negocios a construir su estrategia de ventas.</p>
+        <div style="font-size: 17px; color: #34D399; font-weight: 500">Fundador de Learnify Digital LLC · Socio de crecimiento de empresas</div>
+        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #C9DBEF; max-width: 600px">Hace 2 años y medio trabajo como socio y consultor de empresas, ayudándolas a aumentar sus ventas, ordenar su trabajo y hacer más predecibles sus resultados. Como growth operator armé sistemas de adquisición de clientes, tanto para lanzamientos como para crecimiento orgánico, en nichos muy distintos: desde Fabián Lozano, golfista que enseña a mejorar el juego y el golpe, hasta Ashley Tellez, en espiritualidad femenina. Hoy acompaño como socio a varias empresas a construir su estrategia de ventas.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 4px">
+          <div style="padding: 8px 14px; border-radius: 999px; border: 1px solid #2E5287; font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #D6E6F7">+2,5 años como socio de empresas</div>
+          <div style="padding: 8px 14px; border-radius: 999px; border: 1px solid #2E5287; font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #D6E6F7">Lanzamientos y crecimiento orgánico</div>
+          <div style="padding: 8px 14px; border-radius: 999px; border: 1px solid #2E5287; font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #D6E6F7">Clientes en España y Panamá</div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px"><a class="pill pill-grn" href="https://calendly.com/mauriciosamuelmartin-ry4d" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; min-height: 46px; padding: 0 8px 0 24px; border-radius: 999px; background: #34D399; color: #0A1A33; font-weight: 600; text-decoration: none">Agendar una llamada<span class="arr" style="width: 32px; height: 32px; border-radius: 999px; background: #0A1A33; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a></div>
       </div>
     </div>
   </section><section style="position: relative; overflow: hidden; background: #EEF5FC">
@@ -151,11 +167,11 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
       <div style="flex: 1 1 520px; display: flex; flex-direction: column; gap: 18px">
         <div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #7DD3FC">Contacto</div>
         <h2 style="margin: 0; font-weight: 500; font-size: clamp(34px, 4.2vw, 52px); line-height: 1.05; letter-spacing: -0.03em">¿Querés conocernos mejor?</h2>
-        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #C9DBEF; max-width: 560px">Escribinos y coordinamos una primera conversación.</p>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #C9DBEF; max-width: 560px">Agendá una llamada y vemos juntos en qué punto está tu empresa.</p>
       </div>
       <div style="flex: 0 1 360px; display: flex; flex-direction: column; gap: 10px">
-        <a class="pill pill-grn" href="/contacto.html" style="display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 8px 0 24px; border-radius: 999px; background: #34D399; color: #0A1A33; font-weight: 600; text-decoration: none">Escribinos<span class="arr" style="width: 36px; height: 36px; border-radius: 999px; background: #0A1A33; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
-        <a class="pill pill-line" href="https://calendly.com/mauriciosamuelmartin-ry4d" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 24px; border-radius: 999px; border: 1px solid #2E5287; color: #FFFFFF; font-weight: 600; text-decoration: none">Agendar una llamada<span class="arr" style="display: inline-flex"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
+        <a class="pill pill-grn" href="https://calendly.com/mauriciosamuelmartin-ry4d" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 8px 0 24px; border-radius: 999px; background: #34D399; color: #0A1A33; font-weight: 600; text-decoration: none">Agendar una llamada<span class="arr" style="width: 36px; height: 36px; border-radius: 999px; background: #0A1A33; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
+        <a class="pill pill-line" href="/contacto.html" style="display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 24px; border-radius: 999px; border: 1px solid #2E5287; color: #FFFFFF; font-weight: 600; text-decoration: none">Escribinos<span class="arr" style="display: inline-flex"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
       </div>
     </div>
   </section><footer style="background: #071326; color: #B9CCE6; overflow: hidden">
@@ -163,8 +179,8 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
       <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between">
         <a href="/" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #FFFFFF; align-self: flex-start"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect x="0" y="0" width="32" height="32" rx="8" fill="#7DD3FC"></rect><path d="M10 8v16h12" fill="none" stroke="#0A1A33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-weight: 600; font-size: 20px; letter-spacing: -0.02em">Learnify Digital</span></a>
         <div style="display: flex; flex-wrap: wrap; gap: 32px 72px">
-          <nav aria-label="Servicios" style="display: flex; flex-direction: column; gap: 10px; font-size: 15px"><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #7FA0C8; margin-bottom: 6px">Servicios</div><a class="navlink" href="/consultoria.html" style="color: #D6E6F7; text-decoration: none">Consultoría de negocios</a><a class="navlink" href="/educacion.html" style="color: #D6E6F7; text-decoration: none">Educación digital</a><a class="navlink" href="/programa.html" style="color: #D6E6F7; text-decoration: none">Programa de ingresos digitales</a></nav>
-          <nav aria-label="Empresa" style="display: flex; flex-direction: column; gap: 10px; font-size: 15px"><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #7FA0C8; margin-bottom: 6px">Empresa</div><a class="navlink" href="/como-trabajamos.html" style="color: #D6E6F7; text-decoration: none">Cómo trabajamos</a><a class="navlink" href="/nosotros.html" style="color: #D6E6F7; text-decoration: none">Sobre nosotros</a><a class="navlink" href="/contacto.html" style="color: #D6E6F7; text-decoration: none">Contacto</a></nav>
+          <nav aria-label="Partnership" style="display: flex; flex-direction: column; gap: 10px; font-size: 15px"><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #7FA0C8; margin-bottom: 6px">Partnership</div><a class="navlink" href="/partnership.html" style="color: #D6E6F7; text-decoration: none">Partnership con empresas</a><a class="navlink" href="/partnership.html#casos" style="color: #D6E6F7; text-decoration: none">Casos</a><a class="navlink" href="/como-trabajamos.html" style="color: #D6E6F7; text-decoration: none">Cómo trabajamos</a></nav>
+          <nav aria-label="Empresa" style="display: flex; flex-direction: column; gap: 10px; font-size: 15px"><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #7FA0C8; margin-bottom: 6px">Empresa</div><a class="navlink" href="/nosotros.html" style="color: #D6E6F7; text-decoration: none">Sobre nosotros</a><a class="navlink" href="/contacto.html" style="color: #D6E6F7; text-decoration: none">Contacto</a><a class="navlink" href="https://calendly.com/mauriciosamuelmartin-ry4d" target="_blank" rel="noopener" style="color: #D6E6F7; text-decoration: none">Agendar una llamada</a></nav>
           <nav aria-label="Legal" style="display: flex; flex-direction: column; gap: 10px; font-size: 15px"><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #7FA0C8; margin-bottom: 6px">Legal</div><a class="navlink" href="/politicas.html?tab=priv" style="color: #D6E6F7; text-decoration: none">Política de Privacidad</a><a class="navlink" href="/politicas.html?tab=term" style="color: #D6E6F7; text-decoration: none">Términos y Condiciones</a><a class="navlink" href="/politicas.html?tab=reem" style="color: #D6E6F7; text-decoration: none">Política de Reembolsos</a><a class="navlink" href="/politicas.html?tab=resu" style="color: #D6E6F7; text-decoration: none">Aviso sobre resultados</a></nav>
         </div>
       </div>

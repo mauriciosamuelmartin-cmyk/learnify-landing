@@ -5,13 +5,13 @@ Sitio de [learnifydigital.com](https://learnifydigital.com), publicado con Netli
 ## Páginas
 
 - `index.html`: inicio
-- `consultoria.html`, `educacion.html`, `programa.html`: servicios
+- `partnership.html`: partnership con empresas
 - `como-trabajamos.html`, `nosotros.html`, `contacto.html`
 - `politicas.html`: Privacidad, Términos, Reembolsos y Aviso sobre resultados (pestañas; `?tab=priv|term|reem|resu`)
 - `gracias.html`: después de enviar el formulario
 - `assets/site.js`: líneas animadas, vidrio estriado de las fotos, pestañas y menú
 - `assets/img/`: fotos (sin datos de ubicación)
-- `_redirects`: las páginas legales viejas redirigen a `politicas.html`
+- `_redirects`: páginas viejas (legales, consultoría, educación, programa) redirigen a las nuevas
 
 ## Cómo se publica
 

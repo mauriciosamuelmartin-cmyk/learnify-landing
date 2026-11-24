@@ -35,13 +35,15 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 .faq summary::-webkit-details-marker{display:none}
 .faq[open] .plus{transform:rotate(45deg)}
 .plus,.chev{transition:transform .2s ease}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mq{animation:mq 36s linear infinite}
 @keyframes rv{from{opacity:0;filter:blur(10px);transform:translateY(18px)}to{opacity:1;filter:blur(0);transform:none}}
 @supports (animation-timeline: view()){
   @media (prefers-reduced-motion: no-preference){
     .reveal{animation:rv linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
   }
 }
-@media (prefers-reduced-motion: reduce){.pill,.card{transition:none}}
+@media (prefers-reduced-motion: reduce){.pill,.card{transition:none}.mq{animation:none}}
 </style>
 <script src="/assets/site.js" defer></script>
 </head>
@@ -51,11 +53,11 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
       <div style="max-width: 1240px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between">
         <a href="/" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #FFFFFF"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect x="0" y="0" width="32" height="32" rx="8" fill="#7DD3FC"></rect><path d="M10 8v16h12" fill="none" stroke="#0A1A33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-weight: 600; font-size: 20px; letter-spacing: -0.02em">Learnify Digital</span></a>
         <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 8px 30px; align-items: center; font-size: 15px">
-          <details class="menu" style="position: relative"><summary class="navlink" style="display: inline-flex; align-items: center; gap: 6px; color: #B9CCE6; padding: 6px 0">Servicios <svg class="chev" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary><div style="position: absolute; top: 40px; left: -16px; z-index: 20; width: 300px; background: #FFFFFF; border-radius: 16px; padding: 8px; border: 1px solid #D0E2F4; display: flex; flex-direction: column"><a class="lnk-dark" href="/consultoria.html" style="display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 12px; text-decoration: none; color: #0A1A33"><span style="font-weight: 600; font-size: 15px">Consultoría de negocios</span><span style="font-size: 13px; color: #44536A">Estrategia, ventas, procesos y métricas</span></a><a class="lnk-dark" href="/educacion.html" style="display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 12px; text-decoration: none; color: #0A1A33"><span style="font-weight: 600; font-size: 15px">Educación digital</span><span style="font-size: 13px; color: #44536A">Ebooks prácticos sobre negocios</span></a><a class="lnk-dark" href="/programa.html" style="display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 12px; text-decoration: none; color: #0A1A33"><span style="font-weight: 600; font-size: 15px">Programa de ingresos digitales</span><span style="font-size: 13px; color: #44536A">Vendé online con tu tienda en Shopify</span></a></div></details>
+          <a class="navlink" href="/partnership.html" style="color: #B9CCE6; text-decoration: none; padding: 6px 0">Partnership</a>
           <a class="navlink" href="/como-trabajamos.html" style="color: #B9CCE6; text-decoration: none; padding: 6px 0">Cómo trabajamos</a>
           <a class="navlink" href="/nosotros.html" style="color: #B9CCE6; text-decoration: none; padding: 6px 0">Sobre nosotros</a>
           <a class="navlink" href="/contacto.html" style="color: #B9CCE6; text-decoration: none; padding: 6px 0">Contacto</a>
-          <a class="pill pill-grn" href="/contacto.html" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 8px 0 20px; border-radius: 999px; background: #34D399; color: #0A1A33; font-weight: 600; text-decoration: none">Hablemos<span class="arr" style="width: 30px; height: 30px; border-radius: 999px; background: #0A1A33; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
+          <a class="pill pill-grn" href="https://calendly.com/mauriciosamuelmartin-ry4d" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 8px 0 20px; border-radius: 999px; background: #34D399; color: #0A1A33; font-weight: 600; text-decoration: none">Agendar llamada<span class="arr" style="width: 30px; height: 30px; border-radius: 999px; background: #0A1A33; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span></a>
         </nav>
       </div>
     </header><section style="position: relative; overflow: hidden; background: #EEF5FC">
@@ -64,7 +66,7 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
       <div style="display: flex; flex-direction: column; gap: 18px">
         <div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #2F5F96">Legal</div>
         <h1 style="margin: 0; font-weight: 500; font-size: clamp(40px, 5.4vw, 66px); line-height: 1.03; letter-spacing: -0.035em">Políticas</h1>
-        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #2E4566">Cómo cuidamos tus datos, las condiciones de nuestros productos y servicios, cuándo corresponden reembolsos y cómo leer los resultados que mostramos.</p>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #2E4566">Cómo cuidamos tus datos, las condiciones de nuestros servicios, cuándo corresponden reembolsos y cómo leer los resultados que mostramos.</p>
       </div>
       <div role="tablist" aria-label="Políticas" style="display: flex; flex-wrap: wrap; gap: 6px; padding: 6px; border-radius: 999px; border: 1px solid #BFD5EC; background: #FFFFFF; align-self: flex-start"><button type="button" role="tab" aria-selected="true" aria-controls="panel-priv" id="tab-priv" data-tab="priv" style="min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; background: #0A1A33; color: #FFFFFF">Privacidad</button><button type="button" role="tab" aria-selected="false" aria-controls="panel-term" id="tab-term" data-tab="term" style="min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; background: transparent; color: #2E4566">Términos</button><button type="button" role="tab" aria-selected="false" aria-controls="panel-reem" id="tab-reem" data-tab="reem" style="min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; background: transparent; color: #2E4566">Reembolsos</button><button type="button" role="tab" aria-selected="false" aria-controls="panel-resu" id="tab-resu" data-tab="resu" style="min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; background: transparent; color: #2E4566">Resultados</button></div>
       <div id="panel-priv" role="tabpanel" aria-labelledby="tab-priv" data-panel="priv">
@@ -76,7 +78,7 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Datos que nos das:</p>
 <ul style="margin: 0 0 14px; padding-left: 22px; font-size: 16px; line-height: 1.65; color: #2E4566">
 <li style="margin-bottom: 4px">Nombre, dirección de correo electrónico, motivo y mensaje cuando completás el formulario de contacto o nos escribís.</li>
-<li style="margin-bottom: 4px">Información de tu negocio o de tu proyecto que compartas durante una consultoría o un programa (por ejemplo, números de ventas, procesos o accesos a herramientas que decidas otorgarnos).</li>
+<li style="margin-bottom: 4px">Información de tu empresa o de tu proyecto que compartas durante un partnership, una consultoría o un programa (por ejemplo, números de ventas, procesos o accesos a herramientas que decidas otorgarnos).</li>
 </ul>
 <p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Datos de compra:</p>
 <ul style="margin: 0 0 14px; padding-left: 22px; font-size: 16px; line-height: 1.65; color: #2E4566">
@@ -91,7 +93,7 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <ul style="margin: 0 0 14px; padding-left: 22px; font-size: 16px; line-height: 1.65; color: #2E4566">
 <li style="margin-bottom: 4px">Responder tus consultas.</li>
 <li style="margin-bottom: 4px">Procesar compras y enviarte el acceso a los productos digitales.</li>
-<li style="margin-bottom: 4px">Prestar los servicios de consultoría y acompañamiento que contrates.</li>
+<li style="margin-bottom: 4px">Prestar los servicios de partnership, consultoría y acompañamiento que contrates, incluido el cálculo de porcentajes sobre ventas cuando el acuerdo lo prevea.</li>
 <li style="margin-bottom: 4px">Brindarte soporte y enviarte comunicaciones relacionadas con tu compra o servicio.</li>
 <li style="margin-bottom: 4px">Enviarte novedades u ofertas, solo si nos diste tu consentimiento. Podés darte de baja en cualquier momento.</li>
 <li style="margin-bottom: 4px">Mantener la seguridad del sitio, prevenir fraudes y mejorar nuestros servicios.</li>
@@ -143,8 +145,8 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">1. Quiénes somos</h3>
 <p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Learnify Digital LLC es una empresa registrada en el estado de Wyoming, Estados Unidos, que opera a nivel internacional. Ofrecemos:</p>
 <ul style="margin: 0 0 14px; padding-left: 22px; font-size: 16px; line-height: 1.65; color: #2E4566">
+<li style="margin-bottom: 4px">Servicios de partnership y consultoría estratégica para empresas.</li>
 <li style="margin-bottom: 4px">Productos educativos digitales (ebooks).</li>
-<li style="margin-bottom: 4px">Servicios de consultoría estratégica para negocios.</li>
 <li style="margin-bottom: 4px">Un programa de acompañamiento para generar ingresos vendiendo online con Shopify.</li>
 </ul>
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">2. Uso del sitio</h3>
@@ -155,12 +157,14 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <li style="margin-bottom: 4px">Se venden a través de plataformas de comercio electrónico de terceros. El acceso se envía por correo electrónico una vez confirmado el pago. No hay envíos físicos.</li>
 <li style="margin-bottom: 4px">Al comprar recibís una licencia de uso personal, no exclusiva e intransferible. No podés revender, compartir, publicar ni distribuir el contenido.</li>
 </ul>
-<h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">4. Servicios de consultoría</h3>
+<h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">4. Partnership y consultoría para empresas</h3>
 <ul style="margin: 0 0 14px; padding-left: 22px; font-size: 16px; line-height: 1.65; color: #2E4566">
-<li style="margin-bottom: 4px">Se prestan bajo un modelo de acompañamiento individual (1 a 1), por chat y en videollamadas coordinadas previamente.</li>
-<li style="margin-bottom: 4px">Antes de empezar acordamos el alcance, los entregables, el precio y la duración. La duración habitual es de aproximadamente tres meses.</li>
-<li style="margin-bottom: 4px">Pueden incluir, entre otros: análisis estratégico del negocio, oferta y escalera de valor, sistemas de adquisición de clientes, revisión y optimización de procesos (SOPs), mejora de activos digitales como landing pages y definición de métricas.</li>
-<li style="margin-bottom: 4px">El cliente se compromete a brindar la información necesaria, asistir a las reuniones acordadas y tomar las decisiones que le corresponden. La implementación de las recomendaciones es responsabilidad del cliente.</li>
+<li style="margin-bottom: 4px">Trabajamos como socio de crecimiento de la empresa cliente, por chat y en videollamadas coordinadas previamente. El partnership es un acuerdo de servicios: no implica la creación de una sociedad, la compra de participación en la empresa ni una relación laboral.</li>
+<li style="margin-bottom: 4px">Antes de empezar acordamos por escrito los objetivos, el alcance, los entregables, la duración y las condiciones económicas. La duración habitual del primer acuerdo es de tres meses, renovables.</li>
+<li style="margin-bottom: 4px">Las condiciones económicas incluyen siempre un fee mensual fijo. Según la etapa de la empresa, pueden incluir además un porcentaje sobre las ventas generadas, con la base de cálculo, el porcentaje y la forma de pago definidos en el acuerdo.</li>
+<li style="margin-bottom: 4px">Cuando el acuerdo incluye un porcentaje sobre ventas, la empresa cliente se compromete a darnos acceso a la información necesaria para calcularlo (por ejemplo, acceso de lectura a su plataforma de ventas o reportes periódicos).</li>
+<li style="margin-bottom: 4px">El trabajo puede incluir, entre otros: diagnóstico del negocio, oferta y escalera de valor, sistemas de adquisición de clientes, proceso comercial y equipo de ventas, revisión y optimización de procesos (SOPs), activos digitales como landing pages y definición de métricas.</li>
+<li style="margin-bottom: 4px">La empresa cliente se compromete a brindar la información necesaria, asistir a las reuniones acordadas y tomar las decisiones que le corresponden. La ejecución dentro de su negocio, sus contrataciones y sus obligaciones legales e impositivas son responsabilidad de la empresa cliente.</li>
 </ul>
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">5. Programa de ingresos digitales</h3>
 <ul style="margin: 0 0 14px; padding-left: 22px; font-size: 16px; line-height: 1.65; color: #2E4566">
@@ -174,16 +178,16 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <li style="margin-bottom: 4px">Los precios se informan antes de cada compra o contratación.</li>
 <li style="margin-bottom: 4px">Los pagos se procesan a través de plataformas de terceros que cumplen los estándares de seguridad aplicables. Learnify Digital LLC no almacena información completa de tarjetas.</li>
 <li style="margin-bottom: 4px">Los impuestos, comisiones bancarias o cargos por conversión de moneda que apliquen en tu país pueden correr por tu cuenta.</li>
-<li style="margin-bottom: 4px">Si un servicio se paga en cuotas y una cuota no se abona, podemos suspender el servicio hasta que se regularice el pago.</li>
+<li style="margin-bottom: 4px">Si un fee mensual, un porcentaje acordado o una cuota no se abona en término, podemos suspender el servicio hasta que se regularice el pago.</li>
 </ul>
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">7. Sin garantía de resultados</h3>
 <p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Los resultados dependen de múltiples factores, como la dedicación, la implementación, el mercado y circunstancias externas. Learnify Digital LLC no garantiza resultados específicos de ventas, ingresos o crecimiento derivados de sus productos o servicios.</p>
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">8. No es asesoramiento profesional</h3>
 <p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Nuestros contenidos y servicios tienen fines educativos y estratégicos. No constituyen asesoramiento financiero, de inversión, legal, contable ni impositivo. Para esos temas, consultá a un profesional matriculado.</p>
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">9. Confidencialidad</h3>
-<p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Tratamos como confidencial la información de tu negocio que compartas durante una consultoría o un programa, y la usamos solo para prestarte el servicio. Podemos mencionar resultados o tu nombre como caso de éxito únicamente con tu autorización.</p>
+<p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Tratamos como confidencial la información de tu negocio que compartas durante un partnership, una consultoría o un programa, y la usamos solo para prestarte el servicio. Podemos mencionar resultados o tu nombre como caso de éxito únicamente con tu autorización.</p>
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">10. Propiedad intelectual</h3>
-<p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Los textos, materiales, plantillas, ebooks y demás contenidos de Learnify Digital LLC son de su propiedad o se usan bajo licencia. Queda prohibida su reproducción, distribución o uso comercial sin autorización escrita. Los entregables desarrollados específicamente para tu negocio en una consultoría podés usarlos libremente en tu negocio.</p>
+<p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Los textos, materiales, plantillas, ebooks y demás contenidos de Learnify Digital LLC son de su propiedad o se usan bajo licencia. Queda prohibida su reproducción, distribución o uso comercial sin autorización escrita. Los entregables desarrollados específicamente para tu empresa en un partnership o una consultoría podés usarlos libremente en tu empresa.</p>
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">11. Plataformas de terceros</h3>
 <p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">El sitio y los servicios usan plataformas de terceros (por ejemplo, Shopify, procesadores de pago, herramientas de videollamada o mensajería). No somos responsables por sus fallas, cambios de condiciones o decisiones, como la suspensión de una cuenta.</p>
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">12. Limitación de responsabilidad</h3>
@@ -205,8 +209,9 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">1. Productos digitales (ebooks)</h3>
 <p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Por la naturaleza digital de los productos, todas las ventas son finales. Una vez confirmada la compra y enviado el acceso, no se realizan reembolsos, cambios ni devoluciones.</p>
 <p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">La excepción es cuando el contenido no se entregó correctamente por un problema técnico de nuestra parte. En ese caso, escribinos y lo resolvemos enviándote el acceso o, si no es posible, reembolsando la compra.</p>
-<h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">2. Servicios de consultoría</h3>
-<p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Los pagos por consultoría no son reembolsables una vez iniciado el acompañamiento, independientemente del uso que el cliente haga del servicio.</p>
+<h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">2. Partnership y consultoría para empresas</h3>
+<p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Los fees mensuales no son reembolsables una vez iniciado el período al que corresponden, independientemente del uso que la empresa haga del servicio. Los porcentajes sobre ventas se calculan sobre las ventas efectivamente generadas según lo acordado y no son reembolsables una vez liquidados.</p>
+<p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Si se decide no renovar el acuerdo, la decisión rige para los períodos siguientes.</p>
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">3. Programa de ingresos digitales</h3>
 <p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Los pagos del programa no son reembolsables una vez que recibiste el acceso a los materiales o tuviste la primera sesión, independientemente del uso que hagas del programa.</p>
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">4. Pagos en cuotas o suscripciones</h3>
@@ -222,13 +227,13 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
           <article style="background: #FFFFFF; border: 1px solid #D0E2F4; border-radius: 24px; padding: clamp(24px, 4vw, 48px)">
             <h2 style="margin: 0 0 6px; font-weight: 500; font-size: 34px; letter-spacing: -0.025em">Aviso sobre resultados</h2>
             <div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; color: #5B6B82; margin-bottom: 24px">Última actualización: 24 de noviembre de 2026</div>
-<p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">En este sitio mencionamos casos y resultados de clientes y alumnos, como lanzamientos, cantidad de alumnas o personas que generan ingresos online. Queremos ser claros sobre qué significan.</p>
+<p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">En este sitio mencionamos casos y resultados de empresas y clientes con los que trabajamos, como lanzamientos, cantidad de alumnas o mejoras en ventas. Queremos ser claros sobre qué significan.</p>
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">1. Los resultados no son típicos ni están garantizados</h3>
 <p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Los casos que mostramos son reales y reflejan la experiencia de personas o negocios concretos. No son una promesa de que vas a obtener lo mismo. Tus resultados dependen de tu dedicación, tu experiencia, tu mercado, tu inversión y factores externos que no controlamos.</p>
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">2. Emprender implica riesgos</h3>
 <p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Vender online y hacer crecer un negocio requiere tiempo y, en muchos casos, inversión (por ejemplo, en plataformas, publicidad o productos). Podés no recuperar lo invertido.</p>
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">3. No es una oferta de empleo ni una oportunidad de negocio</h3>
-<p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Nuestros programas y servicios son educativos y de acompañamiento. No ofrecemos empleo, ingresos fijos ni participación en un negocio.</p>
+<p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Nuestros servicios son de consultoría, partnership y educación. No ofrecemos empleo, ingresos fijos ni participación en un negocio.</p>
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">4. Consultá a profesionales</h3>
 <p style="margin: 0 0 12px; font-size: 16px; line-height: 1.65; color: #2E4566">Antes de tomar decisiones financieras, legales o impositivas importantes, consultá a un profesional matriculado de tu país.</p>
 <h3 style="margin: 36px 0 10px; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; color: #0A1A33">5. Contacto</h3>
@@ -241,8 +246,8 @@ a{color:#1D4ED8}a:hover{color:#1E3A8A}
       <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between">
         <a href="/" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #FFFFFF; align-self: flex-start"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect x="0" y="0" width="32" height="32" rx="8" fill="#7DD3FC"></rect><path d="M10 8v16h12" fill="none" stroke="#0A1A33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-weight: 600; font-size: 20px; letter-spacing: -0.02em">Learnify Digital</span></a>
         <div style="display: flex; flex-wrap: wrap; gap: 32px 72px">
-          <nav aria-label="Servicios" style="display: flex; flex-direction: column; gap: 10px; font-size: 15px"><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #7FA0C8; margin-bottom: 6px">Servicios</div><a class="navlink" href="/consultoria.html" style="color: #D6E6F7; text-decoration: none">Consultoría de negocios</a><a class="navlink" href="/educacion.html" style="color: #D6E6F7; text-decoration: none">Educación digital</a><a class="navlink" href="/programa.html" style="color: #D6E6F7; text-decoration: none">Programa de ingresos digitales</a></nav>
-          <nav aria-label="Empresa" style="display: flex; flex-direction: column; gap: 10px; font-size: 15px"><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #7FA0C8; margin-bottom: 6px">Empresa</div><a class="navlink" href="/como-trabajamos.html" style="color: #D6E6F7; text-decoration: none">Cómo trabajamos</a><a class="navlink" href="/nosotros.html" style="color: #D6E6F7; text-decoration: none">Sobre nosotros</a><a class="navlink" href="/contacto.html" style="color: #D6E6F7; text-decoration: none">Contacto</a></nav>
+          <nav aria-label="Partnership" style="display: flex; flex-direction: column; gap: 10px; font-size: 15px"><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #7FA0C8; margin-bottom: 6px">Partnership</div><a class="navlink" href="/partnership.html" style="color: #D6E6F7; text-decoration: none">Partnership con empresas</a><a class="navlink" href="/partnership.html#casos" style="color: #D6E6F7; text-decoration: none">Casos</a><a class="navlink" href="/como-trabajamos.html" style="color: #D6E6F7; text-decoration: none">Cómo trabajamos</a></nav>
+          <nav aria-label="Empresa" style="display: flex; flex-direction: column; gap: 10px; font-size: 15px"><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #7FA0C8; margin-bottom: 6px">Empresa</div><a class="navlink" href="/nosotros.html" style="color: #D6E6F7; text-decoration: none">Sobre nosotros</a><a class="navlink" href="/contacto.html" style="color: #D6E6F7; text-decoration: none">Contacto</a><a class="navlink" href="https://calendly.com/mauriciosamuelmartin-ry4d" target="_blank" rel="noopener" style="color: #D6E6F7; text-decoration: none">Agendar una llamada</a></nav>
           <nav aria-label="Legal" style="display: flex; flex-direction: column; gap: 10px; font-size: 15px"><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #7FA0C8; margin-bottom: 6px">Legal</div><a class="navlink" href="/politicas.html?tab=priv" style="color: #D6E6F7; text-decoration: none">Política de Privacidad</a><a class="navlink" href="/politicas.html?tab=term" style="color: #D6E6F7; text-decoration: none">Términos y Condiciones</a><a class="navlink" href="/politicas.html?tab=reem" style="color: #D6E6F7; text-decoration: none">Política de Reembolsos</a><a class="navlink" href="/politicas.html?tab=resu" style="color: #D6E6F7; text-decoration: none">Aviso sobre resultados</a></nav>
         </div>
       </div>
